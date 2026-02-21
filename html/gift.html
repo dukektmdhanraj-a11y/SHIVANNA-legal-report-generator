@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Gift Deed Form</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: #f4f6f9;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 1100px;
+        margin: 40px auto;
+        background: #ffffff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #2c3e50;
+    }
+
+    h2 {
+        margin-top: 35px;
+        font-size: 18px;
+        color: #34495e;
+        border-bottom: 2px solid #e5e7eb;
+        padding-bottom: 6px;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 14px;
+        margin-top: 15px;
+    }
+
+    label {
+        font-size: 13px;
+        font-weight: 600;
+        color: #555;
+    }
+
+    input {
+        width: 100%;
+        padding: 10px 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 14px;
+        outline: none;
+        transition: 0.2s;
+    }
+
+    input:focus {
+        border-color: #4f46e5;
+        box-shadow: 0 0 0 2px rgba(79,70,229,0.15);
+    }
+
+    .submit-box {
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    button {
+        background: linear-gradient(135deg, #4f46e5, #6366f1);
+        border: none;
+        padding: 14px 40px;
+        color: white;
+        font-size: 16px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    button:hover {
+        opacity: 0.9;
+        transform: translateY(-1px);
+    }
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Gift Deed Details</h1>
+
+<form method="post">
+
+<h2>Basic Information</h2>
+<div class="grid">
+    <input name="DATE" placeholder="Date">
+    <input name="BRANCH_NAME" placeholder="Branch Name">
+    <input name="BRANCH_AREA" placeholder="Branch Area">
+    <input name="APPLICATION_NO" placeholder="Application Number">
+    </div>
+
+<h2>Property Details</h2>
+<div class="grid">
+    <input name="DOOR_NO" placeholder="Door No">
+    <input name="PLOT_NO" placeholder="Plot No">
+    <input name="Assessment_No" placeholder="Assessment No">
+    <input name="EXTENT_YARDS" placeholder="Extent (Sq. Yards)">
+    <input name="SURVEY_NO" placeholder="Survey No">
+    <input name="ADDRESS" placeholder="Address">
+    <input name="VILLAGE" placeholder="Village">
+    <input name="GRAM_PANCHAYAT" placeholder="Gram Panchayat">
+    <input name="MANDAL" placeholder="Mandal">
+    <input name="SRO" placeholder="SRO">
+    <input name="RO" placeholder="RO">
+    <input name="DISTRICT" placeholder="District">
+</div>
+
+<h2>Boundaries</h2>
+<div class="grid">
+    <input name="EAST_BOUNDARY" placeholder="East Boundary">
+    <input name="WEST_BOUNDARY" placeholder="West Boundary">
+    <input name="NORTH_BOUNDARY" placeholder="North Boundary">
+    <input name="SOUTH_BOUNDARY" placeholder="South Boundary">
+</div>
+
+<h2>Measurements</h2>
+<div class="grid">
+    <input name="E_W" placeholder="East–West (Feet)">
+    <input name="N_S" placeholder="North–South (Feet)">
+    <input name="EXTENT_FEET" placeholder="Total Sq. Feet">
+</div>
+
+<h2>Deed Information</h2>
+<div class="grid">
+    <input name="DEED_TYPE" placeholder="Deed Type">
+    <input name="DEED_NO" placeholder="Deed Number">
+    <input name="DEED_DATE" placeholder="Deed Date">
+    <input name="APPLICANT_BOLD" placeholder="Applicant Name">
+    <input name="EXECUTANT_FULL" placeholder="Executant Full Name">
+    <input name="APPLICANT_FULL" placeholder="Applicant Full Name">
+    <input name="RELATION" placeholder="Relation">
+    <input name="WORTH" placeholder="Property Value">
+</div>
+
+<h2>House Tax</h2>
+<div class="grid">
+    <input name="HOUSE_TAX_DATE" placeholder="House Tax Date">
+    <input name="HOUSE_TAX_RECIPT_NO" placeholder="Receipt Number">
+    <input name="FINANCIAL_YEARS" placeholder="Financial Year">
+    <input name="HOUSE_TAX_NAME" placeholder="House Tax Name">
+</div>
+
+<h2>Electricity</h2>
+<div class="grid">
+    <input name="ELECTRICITY_BILL_DATE" placeholder="Electricity Bill Date">
+    <input name="SERVICE_NO" placeholder="Service Number">
+    <input name="ELECTRICITY_NAME" placeholder="Electricity Name">
+</div>
+
+<h2>Encumbrance</h2>
+<div class="grid">
+    <input name="EC_DATE" placeholder="EC Date">
+    <input name="EC_NO" placeholder="EC Number">
+</div>
+
+<h2>Possession</h2>
+<div class="grid">
+    <input name="TIME" placeholder="Possession From">
+</div>
+
+<div class="submit-box">
+    <button type="submit">Generate Gift Deed</button>
+</div>
+
+</form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+{
+  "type": "ots",
+  "company": "Infinity",
+  "template": "ots.docx",
+  "handler": "ots_handler",
+
+  "placeholders": {
+    "DATE": "",
+    "BRANCH_NAME": "",
+    "BRANCH_AREA": "",
+    "APPLICANT_NAME": "",
+    "APPLICANT_RELATION": "",
+    "APPLICATION_NO": "",
+
+    "DOOR_NO": "",
+    "PLOT_NO": "",
+    "EXTENT_YARDS": "",
+    "SURVEY_NO": "",
+    "ADDRESS": "",
+    "VILLAGE": "",
+    "GRAM_PANCHAYAT": "",
+    "MANDAL": "",
+    "SRO": "",
+    "RO": "",
+    "DISTRICT": "",
+
+    "EAST_BOUNDARY": "",
+    "WEST_BOUNDARY": "",
+    "NORTH_BOUNDARY": "",
+    "SOUTH_BOUNDARY": "",
+
+    "E_W": "",
+    "N_S": "",
+    "EXTENT_FEET": "",
+
+    "DEED_TYPE": "",
+    "DEED_NO": "",
+    "DEED_DATE": "",
+    "EXECUTANT_FULL": "",
+    "APPLICANT_FULL": "",
+
+    "HOUSE_TAX_DATE": "",
+    "HOUSE_TAX_RECIPT_NO": "",
+    "FINANCIAL_YEARS": "",
+    "HOUSE_TAX_NAME": "",
+
+    "ELECTRICITY_BILL_DATE": "",
+    "SERVICE_NO": "",
+    "ELECTRICITY_NAME": "",
+
+    "EC_DATE": "",
+    "EC_NO": "",
+
+    "APPLICANT_BOLD": "",
+    "TIME": ""
+  },
+
+  "required": [
+    "DATE",
+    "BRANCH_NAME",
+    "BRANCH_AREA",
+    "APPLICANT_NAME",
+    "APPLICATION_NO",
+
+    "DOOR_NO",
+    "PLOT_NO",
+    "EXTENT_YARDS",
+    "SURVEY_NO",
+    "ADDRESS",
+    "VILLAGE",
+    "GRAM_PANCHAYAT",
+    "MANDAL",
+    "SRO",
+    "RO",
+    "DISTRICT",
+
+    "EAST_BOUNDARY",
+    "WEST_BOUNDARY",
+    "NORTH_BOUNDARY",
+    "SOUTH_BOUNDARY",
+
+    "E_W",
+    "N_S",
+    "EXTENT_FEET",
+
+    "DEED_TYPE",
+    "DEED_NO",
+    "DEED_DATE",
+    "EXECUTANT_FULL",
+    "APPLICANT_FULL",
+
+    "HOUSE_TAX_DATE",
+    "HOUSE_TAX_RECIPT_NO",
+    "FINANCIAL_YEARS",
+    "HOUSE_TAX_NAME",
+
+    "ELECTRICITY_BILL_DATE",
+    "SERVICE_NO",
+    "ELECTRICITY_NAME",
+
+    "EC_DATE",
+    "EC_NO",
+
+    "TIME"
+  ]
+}

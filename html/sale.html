@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sale Deed Entry</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f4f6f9;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+h1 {
+    text-align: center;
+    color: #2c3e50;
+}
+h2 {
+    margin-top: 30px;
+    font-size: 18px;
+    border-bottom: 2px solid #e5e7eb;
+    padding-bottom: 6px;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 14px;
+}
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+button {
+    margin-top: 30px;
+    padding: 14px 40px;
+    background: #4f46e5;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+button:hover {
+    opacity: 0.9;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<h1>Sale Deed Details</h1>
+
+<form method="post">
+
+<h2>Basic Details</h2>
+<div class="grid">
+<input name="DATE" placeholder="DATE">
+<input name="BRANCH_NAME" placeholder="BRANCH_NAME">
+<input name="BRANCH_AREA" placeholder="BRANCH_AREA">
+<input name="APPLICATION_NO" placeholder="APPLICATION_NO">
+</div>
+
+<h2>Property Details</h2>
+<div class="grid">
+<input name="DOOR_NO" placeholder="DOOR_NO">
+<input name="PLOT_NO" placeholder="PLOT_NO">
+<input name="Assessment_No" placeholder="Assessment_No">
+<input name="EXTENT_YARDS" placeholder="EXTENT_YARDS">
+<input name="SURVEY_NO" placeholder="SURVEY_NO">
+<input name="ADDRESS" placeholder="ADDRESS">
+<input name="VILLAGE" placeholder="VILLAGE">
+<input name="GRAM_PANCHAYAT" placeholder="GRAM_PANCHAYAT">
+<input name="MANDAL" placeholder="MANDAL">
+<input name="SRO" placeholder="SRO">
+<input name="RO" placeholder="RO">
+<input name="DISTRICT" placeholder="DISTRICT">
+</div>
+
+<h2>Boundaries</h2>
+<div class="grid">
+<input name="EAST_BOUNDARY" placeholder="EAST_BOUNDARY">
+<input name="WEST_BOUNDARY" placeholder="WEST_BOUNDARY">
+<input name="NORTH_BOUNDARY" placeholder="NORTH_BOUNDARY">
+<input name="SOUTH_BOUNDARY" placeholder="SOUTH_BOUNDARY">
+</div>
+
+<h2>Measurements</h2>
+<div class="grid">
+<input name="E_W" placeholder="E_W">
+<input name="N_S" placeholder="N_S">
+<input name="EXTENT_FEET" placeholder="EXTENT_FEET">
+</div>
+
+<h2>Deed Details</h2>
+<div class="grid">
+<input name="DEED_TYPE" placeholder="DEED_TYPE">
+<input name="DEED_NO" placeholder="DEED_NO">
+<input name="DEED_DATE" placeholder="DEED_DATE">
+<input name="EXECUTANT_FULL" placeholder="EXECUTANT_FULL">
+<input name="APPLICANT_FULL" placeholder="APPLICANT_FULL">
+<input name="APPLICANT_BOLD" placeholder="APPLICANT_BOLD">
+<input name="WORTH" placeholder="WORTH">
+</div>
+
+<h2>House Tax</h2>
+<div class="grid">
+<input name="HOUSE_TAX_DATE" placeholder="HOUSE_TAX_DATE">
+<input name="HOUSE_TAX_RECIPT_NO" placeholder="HOUSE_TAX_RECIPT_NO">
+<input name="FINANCIAL_YEARS" placeholder="FINANCIAL_YEARS">
+<input name="HOUSE_TAX_NAME" placeholder="HOUSE_TAX_NAME">
+</div>
+
+<h2>Electricity</h2>
+<div class="grid">
+<input name="ELECTRICITY_BILL_DATE" placeholder="ELECTRICITY_BILL_DATE">
+<input name="SERVICE_NO" placeholder="SERVICE_NO">
+<input name="ELECTRICITY_NAME" placeholder="ELECTRICITY_NAME">
+</div>
+
+<h2>Encumbrance</h2>
+<div class="grid">
+<input name="EC_DATE" placeholder="EC_DATE">
+<input name="EC_NO" placeholder="EC_NO">
+</div>
+
+<h2>Possession</h2>
+<div class="grid">
+<input name="TIME" placeholder="TIME">
+</div>
+
+<button type="submit">Generate Sale Deed</button>
+
+</form>
+</div>
+</body>
+</html>
