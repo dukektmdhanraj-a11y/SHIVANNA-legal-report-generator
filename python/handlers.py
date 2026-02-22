@@ -1,10 +1,13 @@
-def gift_handler(data, template_path):
-    return data
+def gift_handler(input_data, template):
+    # logic
+    return processed_data
 
 
-def sale_handler(data, template_path):
-    return data
+def sale_handler(input_data, template):
+    # logic
+    return processed_data
 
 
-def ots_handler(data, template_path):
-    return data
+def ots_handler(input_data, template):
+    # logic
+    return processed_data
