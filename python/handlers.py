@@ -1,10 +1,7 @@
-def gift_handler(data, template_path):
-    return data
+from docxtpl import DocxTemplate
 
 
-def sale_handler(data, template_path):
-    return data
-
-
-def ots_handler(data, template_path):
-    return data
+def render_docx(template_path, output_path, values):
+    doc = DocxTemplate(template_path)
+    doc.render(values)
+    doc.save(output_path)
