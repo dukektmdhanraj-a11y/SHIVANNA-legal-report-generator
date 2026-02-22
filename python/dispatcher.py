@@ -13,15 +13,17 @@ HANDLERS = {
 
 
 def load_config(doc_type):
-    with open(os.path.join(BASE_DIR, "configs", f"{doc_type}.json"), "r", encoding="utf-8") as f:
+    config_path = os.path.join(BASE_DIR, "configs", f"{doc_type}.json")
+    with open(config_path, "r", encoding="utf-8") as f:
         return json.load(f)
 
 
 def dispatch(doc_type, input_data, output_path):
     config = load_config(doc_type)
 
+    # ✅ FIX: Only check if key exists (not empty value)
     for field in config["required"]:
-        if field not in input_data or input_data[field] == "":
+        if field not in input_data:
             raise ValueError(f"Missing required field: {field}")
 
     handler = HANDLERS[config["handler"]]
