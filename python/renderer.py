@@ -1,11 +1,12 @@
 from docxtpl import DocxTemplate
-import os
+from io import BytesIO
 
-def render_docx(template_path, filename, values):
+def render_docx(template_path, values):
     doc = DocxTemplate(template_path)
     doc.render(values)
 
-    output_path = os.path.join("/tmp", filename)
-    doc.save(output_path)
+    buffer = BytesIO()
+    doc.save(buffer)
+    buffer.seek(0)
 
-    return output_path
+    return buffer
