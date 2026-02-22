@@ -5,9 +5,6 @@ import re
 
 app = Flask(__name__)
 
-# FIX: base directory for Render-safe paths
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-
 
 def safe_filename(text):
     if not text:
@@ -44,56 +41,54 @@ def home():
     """
 
 
+# ---------- GIFT ----------
 @app.route("/gift", methods=["GET", "POST"])
 def gift():
     if request.method == "POST":
         data = request.form.to_dict()
         filename = generate_filename(data, "gift")
 
-        # FIX: absolute output path
-        output_dir = os.path.join(BASE_DIR, "output")
-        os.makedirs(output_dir, exist_ok=True)
-        output_path = os.path.join(output_dir, filename)
+        # 🔴 FIX: Render-safe path
+        output_path = f"/tmp/{filename}"
 
         dispatch("gift", data, output_path)
+
         return send_file(output_path, as_attachment=True)
 
-    # FIX: absolute html path
-    return open(os.path.join(BASE_DIR, "html", "gift.html"), encoding="utf-8").read()
+    return open("html/gift.html", encoding="utf-8").read()
 
 
+# ---------- SALE ----------
 @app.route("/sale", methods=["GET", "POST"])
 def sale():
     if request.method == "POST":
         data = request.form.to_dict()
         filename = generate_filename(data, "sale")
 
-        output_dir = os.path.join(BASE_DIR, "output")
-        os.makedirs(output_dir, exist_ok=True)
-        output_path = os.path.join(output_dir, filename)
+        output_path = f"/tmp/{filename}"
 
         dispatch("sale", data, output_path)
+
         return send_file(output_path, as_attachment=True)
 
-    return open(os.path.join(BASE_DIR, "html", "sale.html"), encoding="utf-8").read()
+    return open("html/sale.html", encoding="utf-8").read()
 
 
+# ---------- OTS ----------
 @app.route("/ots", methods=["GET", "POST"])
 def ots():
     if request.method == "POST":
         data = request.form.to_dict()
         filename = generate_filename(data, "ots")
 
-        output_dir = os.path.join(BASE_DIR, "output")
-        os.makedirs(output_dir, exist_ok=True)
-        output_path = os.path.join(output_dir, filename)
+        output_path = f"/tmp/{filename}"
 
         dispatch("ots", data, output_path)
+
         return send_file(output_path, as_attachment=True)
 
-    return open(os.path.join(BASE_DIR, "html", "ots.html"), encoding="utf-8").read()
+    return open("html/ots.html", encoding="utf-8").read()
 
 
 if __name__ == "__main__":
-    os.makedirs(os.path.join(BASE_DIR, "output"), exist_ok=True)
     app.run(debug=True)
